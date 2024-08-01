@@ -5,7 +5,7 @@ import TextView from './components/TextView';
 
 function App() {
   const [data, setData] = useState('');
-  const [textColor, setTextColor] = useState('yellow');
+  const [textColor, setTextColor] = useState('#FFFF00');
 
   const handelDataChange = (newData: string) => {
     setData(newData);
