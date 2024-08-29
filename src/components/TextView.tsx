@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TextView = ({ data, textColor }: {data: string, textColor: string}) => {
+const TextView = ({ data, textColor, fontSize }: {data: string, textColor: string, fontSize: number}) => {
     const getColorShade = (color: any) => {
         const colorToHsl = (color: string) => {
             const hex = color.replace('#', '');
@@ -43,7 +43,9 @@ const TextView = ({ data, textColor }: {data: string, textColor: string}) => {
 
     return (
         <div className='animated-title' 
-            style={{color: textColor,
+            style={{
+                color: textColor,
+                fontSize: `${fontSize}px`,
                 textShadow: `
                 0 0 5px ${textColor},
                 0 0 10px ${textColor},
